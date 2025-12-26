@@ -19,8 +19,8 @@ python $ROOT_DIR/scripts/wan_t2v_inference.py  \
     --height 720 \
     --width 1280 \
     --prompt_file $SCRIPT_DIR/prompts/optimized_${DIMENSION}.txt \
-    --start $START \
-    --end $END \
+    --start-index $START \
+    --end-index $END \
     --model_id Wan-AI/Wan2.1-T2V-1.3B-Diffusers \
     --warmup_step 1 \
     --num_inference_steps 50 \

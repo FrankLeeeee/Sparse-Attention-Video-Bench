@@ -1,10 +1,13 @@
 vbench
 openai
 lpips
-torcheval-nightly
-opencv-python
+torcheval>=0.0.6
+opencv-python-headless
 scikit-image
 git+https://github.com/Po-Hsun-Su/pytorch-ssim.git
 torchvision
 torch
 av
+transformers
+peft
+diffusers

@@ -14,15 +14,16 @@ if [ -z "$DIMENSION" ]; then
     exit 1
 fi
 
-python $ROOT_DIR/scripts/hunyuan_t2v_inference.py  \
+python $ROOT_DIR/scripts/wan_t2v_inference.py  \
     --strategy dense \
     --height 720 \
     --width 1280 \
     --prompt_file $SCRIPT_DIR/prompts/optimized_${DIMENSION}.txt \
-    --start $START \
-    --end $END \
+    --start-index $START \
+    --end-index $END \
+    --model_id Wan-AI/Wan2.1-T2V-14B-Diffusers \
     --warmup_step 1 \
     --num_inference_steps 50 \
-    --num_frames 129 \
+    --num_frames 81 \
     --seed $SEED \
-    --output_dir $SCRIPT_DIR/results/hunyuan/dense/$DIMENSION/SEED_$SEED
+    --output_dir $SCRIPT_DIR/results/wan14b/dense/$DIMENSION/seed_$SEED
